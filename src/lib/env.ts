@@ -218,5 +218,5 @@ const previewAuthPolicy = resolvePreviewAuthPolicy({
 export const isPreviewAuthEnabled = previewAuthPolicy.enabled;
 export const previewAuthRequiresPassword = previewAuthPolicy.requiresPassword;
 export const isGoogleAuthEnabled = Boolean(AUTH_GOOGLE_ID && AUTH_GOOGLE_SECRET);
-export const isSelfHostAuthEnabled = Boolean(AUTH_SELF_HOST_PASSWORDD);
+export const isSelfHostAuthEnabled = Boolean(AUTH_SELF_HOST_PASSWORD);
 export const isPublicDemoEnabled = resolvePublicDemoEnabled(PUBLIC_DEMO_ENABLED);
