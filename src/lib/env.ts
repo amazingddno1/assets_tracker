@@ -113,7 +113,7 @@ const envSchema = z
       authDisabled: value.PREVIEW_AUTH_DISABLED,
     });
     const googleEnabled = hasGoogleId && hasGoogleSecret;
-    const selfHostEnabled = value.VERCEL !== "1" && Boolean(value.AUTH_SELF_HOST_PASSWORD);
+    const selfHostEnabled = Boolean(value.AUTH_SELF_HOST_PASSWORD);
 
     if (
       value.NODE_ENV === "production" &&
@@ -218,5 +218,5 @@ const previewAuthPolicy = resolvePreviewAuthPolicy({
 export const isPreviewAuthEnabled = previewAuthPolicy.enabled;
 export const previewAuthRequiresPassword = previewAuthPolicy.requiresPassword;
 export const isGoogleAuthEnabled = Boolean(AUTH_GOOGLE_ID && AUTH_GOOGLE_SECRET);
-export const isSelfHostAuthEnabled = VERCEL !== "1" && Boolean(AUTH_SELF_HOST_PASSWORD);
+export const isSelfHostAuthEnabled = Boolean(AUTH_SELF_HOST_PASSWORDD);
 export const isPublicDemoEnabled = resolvePublicDemoEnabled(PUBLIC_DEMO_ENABLED);
